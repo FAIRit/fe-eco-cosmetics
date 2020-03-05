@@ -33,6 +33,10 @@
       "last 1 safari version"
     ]
   },
+  "devDependencies": {
+    "@types/react": "^16.9.23",
+    "@types/styled-components": "^5.0.1"
+  },
   "engines": {
     "node": "12.14.1"
   }
