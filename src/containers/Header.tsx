@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import HeaderLink, { NavLink } from "./HeaderLink";
+import HeaderLink, { NavLink } from "../components/HeaderLink";
 
 export interface HeaderProps {
   logoName: string;
@@ -21,6 +21,7 @@ const HeaderLogo = styled.div`
   font-size: 2rem;
   font-weight: 600;
   padding-left: 40px;
+  cursor: pointer;
 `;
 
 const ListStyle = styled.ul`

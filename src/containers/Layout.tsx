@@ -5,7 +5,7 @@ import Header, { HeaderProps } from "./Header";
 import Footer from "./Footer";
 
 const Wrapper = styled.div`
-  height: 1000px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   flex: 1;
   background-color: #fcfbf8;
-  height: 1400px;
+  height: 100vh;
 `;
 
 interface PageTemplateProps {
