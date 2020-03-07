@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import HeaderLink, { NavLink } from "../components/HeaderLink";
+import HeaderLink, { NavLink } from '../components/HeaderLink';
 
 export interface HeaderProps {
   logoName: string;
