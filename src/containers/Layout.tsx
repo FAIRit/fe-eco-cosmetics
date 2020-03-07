@@ -27,7 +27,7 @@ const headerProps: HeaderProps = {
     links: [
         {
             linkName: 'About'
-            // route:
+            // TODO: Add routes
         },
         {
             linkName: 'Ingridient'

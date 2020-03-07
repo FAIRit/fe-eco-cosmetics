@@ -17,7 +17,7 @@ const LinkStyle = styled.li`
 `;
 
 const HeaderLink: React.FC<NavLink> = ({ linkName }) => {
-  return <LinkStyle className="nav-link">{linkName}</LinkStyle>;
+  return <LinkStyle>{linkName}</LinkStyle>;
 };
 
 export default HeaderLink;
