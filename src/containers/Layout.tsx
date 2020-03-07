@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import Header, { HeaderProps } from "./Header";
-import Footer from "./Footer";
+import Header, { HeaderProps } from './Header';
+import Footer from './Footer';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -23,31 +23,29 @@ interface PageTemplateProps {
 }
 
 const headerProps: HeaderProps = {
-    logoName: 'eCosmetics',
-    links: [
-        {
-            linkName: 'About'
-            // TODO: Add routes
-        },
-        {
-            linkName: 'Ingridient'
-        },
-        {
-            linkName: 'Analyze INCI'
-        },
-        {
-            linkName: 'Products'
-        },
-    ]
-}
+  logoName: 'eCosmetics',
+  links: [
+    {
+      linkName: 'About',
+      // TODO: Add routes
+    },
+    {
+      linkName: 'Ingridient',
+    },
+    {
+      linkName: 'Analyze INCI',
+    },
+    {
+      linkName: 'Products',
+    },
+  ],
+};
 
-const PageTemplate: React.FC<PageTemplateProps> = ({children}) => {
+const PageTemplate: React.FC<PageTemplateProps> = ({ children }) => {
   return (
     <Wrapper>
       <Header logoName={headerProps.logoName} links={headerProps.links} />
-      <ContentWrapper>
-          {children}
-      </ContentWrapper>
+      <ContentWrapper>{children}</ContentWrapper>
       <Footer />
     </Wrapper>
   );
