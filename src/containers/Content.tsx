@@ -6,14 +6,12 @@ import About from './Content/About';
 import Ingredient from './Content/Ingredient';
 import AnalyzeInci from './Content/AnalyzeInci';
 import Products from './Content/Products';
+// import img3 from '../components/Images/cosmetic-shop-07.jpg';
 
 const ContentWrapper = styled.div`
   order: 2;
-  background-color: #fcfbf8;
-  height: 100vh;
-  padding-top: 4rem;
-  padding-left: 10%;
-  padding-right: 10%;
+  background-color: white;
+  
 `;
 
 const Content = () => {
