@@ -1,54 +1,47 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Header, { HeaderProps } from './Header';
-import Footer from './Footer';
+import Header, { HeaderProps } from './containers/Header';
+import Content from './containers/Content'
+import Footer from './containers/Footer';
 
 const Wrapper = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
   font-family: 'Poppins', sans-serif;
   color: #666;
+  display: flex;
+  flex-direction: column;
 `;
-
-const ContentWrapper = styled.div`
-  flex: 1;
-  background-color: #fcfbf8;
-  height: 100vh;
-`;
-
-interface PageTemplateProps {
-  children: any;
-}
 
 const headerProps: HeaderProps = {
   logoName: 'eCosmetics',
   links: [
     {
       linkName: 'About',
-      // TODO: Add routes
+      linkRoute: '/about',
     },
     {
-      linkName: 'Ingridient',
+      linkName: 'Ingredient',
+      linkRoute: '/',
     },
     {
       linkName: 'Analyze INCI',
+      linkRoute: '/analyzeinci',
     },
     {
       linkName: 'Products',
+      linkRoute: '/products',
     },
   ],
 };
 
-const PageTemplate: React.FC<PageTemplateProps> = ({ children }) => {
+const App: React.FC = () => {
   return (
     <Wrapper>
       <Header logoName={headerProps.logoName} links={headerProps.links} />
-      <ContentWrapper>{children}</ContentWrapper>
+      <Content />
       <Footer />
     </Wrapper>
   );
 };
 
-export default PageTemplate;
+export default App;

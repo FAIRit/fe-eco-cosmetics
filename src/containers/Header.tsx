@@ -1,16 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import HeaderLink, { NavLink } from '../components/HeaderLink';
+import HeaderLink, { NavigationLink } from '../components/HeaderLink';
 
 export interface HeaderProps {
   logoName: string;
-  links: NavLink[];
+  links: NavigationLink[];
 }
 
 const HeaderWrapper = styled.div`
+  order: 1;
   position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -20,13 +23,13 @@ const HeaderWrapper = styled.div`
 const HeaderLogo = styled.div`
   font-size: 2rem;
   font-weight: 600;
-  padding-left: 40px;
+  margin-left: 5%;
   cursor: pointer;
 `;
 
 const ListStyle = styled.ul`
   list-style: none;
-  padding-right: 40px;
+  margin-right: 5%;
 `;
 
 const Header: React.FC<HeaderProps> = ({ logoName, links }) => {
@@ -35,8 +38,8 @@ const Header: React.FC<HeaderProps> = ({ logoName, links }) => {
       <HeaderLogo>{logoName}</HeaderLogo>
       <ListStyle>
         {links &&
-          links.map((link: NavLink) => (
-            <HeaderLink linkName={link.linkName} key={link.linkName} />
+          links.map((link: NavigationLink) => (
+            <HeaderLink linkName={link.linkName} linkRoute={link.linkRoute} key={link.linkName} />
           ))}
       </ListStyle>
     </HeaderWrapper>
