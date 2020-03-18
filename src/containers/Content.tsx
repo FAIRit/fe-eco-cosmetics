@@ -6,6 +6,7 @@ import About from './Content/About';
 import Ingredient from './Content/Ingredient';
 import AnalyzeInci from './Content/AnalyzeInci';
 import Products from './Content/Products';
+import { ROUTES } from '../components/routes';
 
 const ContentWrapper = styled.div`
   order: 2;
@@ -20,10 +21,10 @@ const Content = () => {
   return (
     <ContentWrapper>
       <Switch>
-        <Route exact path='/' component={Ingredient} />
-        <Route path='/about' component={About} />
-        <Route path='/analyzeinci' component={AnalyzeInci} />
-        <Route path='/products' component={Products} />
+        <Route exact path={ROUTES.ingredient} component={Ingredient} />
+        <Route path={ROUTES.about} component={About} />
+        <Route path={ROUTES.analyzeInci} component={AnalyzeInci} />
+        <Route path={ROUTES.productList} component={Products} />
       </Switch>
     </ContentWrapper>
   );

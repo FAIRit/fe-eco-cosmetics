@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Header, { HeaderProps } from './containers/Header';
 import Content from './containers/Content'
 import Footer from './containers/Footer';
+import { ROUTES } from './components/routes';
 
 const Wrapper = styled.div`
   font-family: 'Poppins', sans-serif;
@@ -17,19 +18,19 @@ const headerProps: HeaderProps = {
   links: [
     {
       linkName: 'About',
-      linkRoute: '/about',
+      linkRoute: ROUTES.about,
     },
     {
       linkName: 'Ingredient',
-      linkRoute: '/',
+      linkRoute: ROUTES.ingredient,
     },
     {
       linkName: 'Analyze INCI',
-      linkRoute: '/analyzeinci',
+      linkRoute: ROUTES.analyzeInci,
     },
     {
       linkName: 'Products',
-      linkRoute: '/products',
+      linkRoute: ROUTES.productList,
     },
   ],
 };
