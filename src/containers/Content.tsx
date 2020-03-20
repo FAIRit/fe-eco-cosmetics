@@ -10,11 +10,7 @@ import { ROUTES } from '../components/routes';
 
 const ContentWrapper = styled.div`
   order: 2;
-  background-color: #fcfbf8;
-  height: 100vh;
-  padding-top: 4rem;
-  padding-left: 10%;
-  padding-right: 10%;
+  background-color: white;
 `;
 
 const Content = () => {
