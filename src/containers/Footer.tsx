@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterWrapper = styled.div`
-  display: flex;
+  order: 3;
   font-size: 1rem;
   height: 2.5rem;
   background-color: #1b213d;
