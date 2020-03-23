@@ -13,6 +13,10 @@ export const Title = styled.p`
   font-size: 80px;
   color: #333;
   margin-bottom: 0;
+
+  @media (max-width: 767px) {
+    font-size: 50px;
+  }
 `;
 
 export const Text = styled.p`
